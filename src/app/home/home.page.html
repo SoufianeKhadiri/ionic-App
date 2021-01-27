@@ -1,20 +1,177 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-item lines="none">
+    <ion-avatar slot="end">
+      <ion-icon id="user" name="person-outline" routerLink="/login" ></ion-icon>
+    </ion-avatar>
+    <ion-label>
+      <img id="logo" src="assets/logo_large.png"  >
+      <p>find events in deiner nähe..</p>
+    </ion-label>
+  </ion-item>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="ion-padding wrapper">
+
+  <ion-searchbar></ion-searchbar>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-align-items-baseline">
+      <ion-col size="6">
+        <h4 class="title">
+          Popular Events
+        </h4>
+      </ion-col>
+      <ion-col size="6">
+        <h4 class="more ion-text-end" >
+          View more
+        </h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/events1.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Linz party event</ion-card-title>
+                <ion-card-subtitle>Mi jan 2 at 03.00 linz campus room</ion-card-subtitle>
+                
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/events2.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Silvester GOA party</ion-card-title>
+                <ion-card-subtitle>jan 2 at 02.00 Wien süddengasse 2</ion-card-subtitle>
+                
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/events3.jpeg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">The black Keys on Stage</ion-card-title>
+                <ion-card-subtitle>Mi jan 6 at 21.00 arena Wien</ion-card-subtitle>
+               
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <!-- <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide> -->
+
+          <!-- <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Popular Events</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide> -->
+
+
+          
+<!-- 
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide> -->
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  
+  
+    
+    
+      <div class="ion-padding">
+        <ion-row>
+          <ion-col size="6">
+            <ion-badge id="footer" color="light" class="ion-margin-end">
+              Copyright Events meiner Stadt 2021
+            </ion-badge>
+          </ion-col>
+          <ion-col size="6" class="ion-text-end">
+            <ion-badge color="light">
+             
+            </ion-badge>
+          </ion-col>
+        </ion-row>
+      </div>
+
 </ion-content>
