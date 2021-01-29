@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+    <ion-item lines="none">
+        <ion-avatar slot="end">
+            <ion-icon id="user" name="person-outline" routerLink="/login"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+            <img id="logo" src="assets/logo_large.png">
+            <p>find events in deiner nähe..</p>
+        </ion-label>
+    </ion-item>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-card *ngFor="let ev of events">
+            <ion-card-content>
+                <ion-img src="{{ ev.img }}"></ion-img>
+                <ion-card-title>{{ ev.title }}</ion-card-title>
+                <ion-card-subtitle>{{ ev.description }}</ion-card-subtitle>
+                <ion-button id="no-padding-btn">Go to Event</ion-button>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>
+
+
+<ion-footer>
+    <ion-router-link href="home">Home</ion-router-link>
+    <ion-badge id="footer" class="ion-margin-end">
+        &copy; Events meiner Stadt 2021
+    </ion-badge>
+</ion-footer>
